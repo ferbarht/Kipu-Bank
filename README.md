@@ -19,19 +19,18 @@
 
 ## Instrucciones de despliegue
 
-### Opción rápida con Remix
+### Remix
 
-1. Abrí [Remix](https://remix.ethereum.org) y pegá el contenido de `contracts/KipuBank.sol`.
-2. Compilá el contrato con la versión **0.8.30** y activá la optimización.
+1. Abrir [Remix](https://remix.ethereum.org) y pegar el contenido de `contracts/KipuBank.sol`.
+2. Compilar el contrato con la versión **0.8.30**.
 3. En la pestaña **Deploy & Run Transactions**:
-   - Seleccioná **Injected Provider - MetaMask**.
-   - Asegurate de estar conectado a la red **Sepolia**.
-   - Ingresá los parámetros del constructor:
+   - Seleccionar **Injected Provider - MetaMask**.
+   - Estar conectado a la red **Sepolia**.
+   - Ingresar los parámetros del constructor:
      - `withdrawalLimit`: por ejemplo `500000000000000000` (0.5 ETH en wei)
      - `bankCap`: por ejemplo `2000000000000000000` (2 ETH en wei)
-   - Opcional: podés enviar ETH en el campo **Value** si querés fondear el contrato al desplegar.
-4. Pulsá **Deploy** y confirmá la transacción en MetaMask.
-5. Copiá la dirección del contrato desplegado y guardala para el README.
+   - Se pueden enviar ETH en el campo **Value**.
+4. Hacer click en **Deploy** y confirmar la transacción en MetaMask.
 
 ---
 
@@ -57,7 +56,7 @@
 
 ### Interacción directa
 
-- También podés enviar ETH directamente al contrato (sin llamar a `deposit()`) y se ejecutará la lógica de depósito automáticamente gracias a `receive()` y `fallback()`.
+- También se puede enviar ETH directamente al contrato (sin llamar a `deposit()`) y se ejecutará la lógica de depósito automáticamente gracias a `receive()` y `fallback()`.
 
 ---
 
